@@ -4,7 +4,7 @@ class Flint < Formula
   url "https://flintlib.org/flint-3.1.0.tar.gz"
   sha256 "b30df05fa81de49c20d460edccf8c410279d1cf8410f2d425f707b48280a2be2"
   license "LGPL-3.0-or-later"
-  head "https://github.com/wbhart/flint2.git", branch: "trunk"
+  head "https://github.com/flintlib/flint.git", branch: "main"
 
   livecheck do
     url "https://flintlib.org/downloads.html"
