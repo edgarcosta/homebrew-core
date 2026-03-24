@@ -21,7 +21,7 @@ class GmpEcm < Formula
   def install
     system "autoreconf", "--force", "--install"
 
-    args = std_configure_args + %W[
+    args = %W[
       --with-gmp=#{Formula["gmp"].prefix}
       --enable-shared
     ]
@@ -33,7 +33,7 @@ class GmpEcm < Formula
       args << "gmp_cv_asm_underscore=yes"
     end
 
-    system "./configure", *args
+    system "./configure", *args, *std_configure_args
     system "make"
     system "make", "install"
   end
